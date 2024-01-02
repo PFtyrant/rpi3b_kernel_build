@@ -1,0 +1,9 @@
+services:
+  builder:
+    image: "rpi3_builder:Buster"
+    build: .
+    container_name: rpi3_build_tester
+    volumes: [$PWD:/root/test/]
+    working_dir: /root/test/
+    stdin_open: true
+    restart: always
